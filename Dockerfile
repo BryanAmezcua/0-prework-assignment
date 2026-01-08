@@ -3,8 +3,8 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Install Jupyter
-RUN pip install --no-cache-dir jupyter
-
+# RUN pip install --no-cache-dir jupyter --- OLD, commented by Bryan A
+RUN pip install --no-cache-dir jupyter torch
 # Copy notebook files
 COPY . .
 
